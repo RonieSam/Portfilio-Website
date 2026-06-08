@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f8f6f5;
+    background-image: radial-gradient(#D8D3C8 1px, transparent 1px);
+    background-size: 24px 24px;
+    @apply font-display text-slate-900 selection:bg-primary selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-vertical {
+    writing-mode: vertical-rl;
+  }
+  .stamp-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  .rotating-text {
+    animation: rotate 20s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
